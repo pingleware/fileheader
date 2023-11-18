@@ -1,3 +1,11 @@
+/**
+ * File: extension.ts
+ * Created: 11/18/2023, 12:30:31 PM EST
+ * Last Modified: 11/18/2023, 02:39:28 PM EST
+ * File Header Created By: @pingleware/fileheader
+ */
+
+
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
@@ -9,7 +17,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-    let disposable = vscode.commands.registerCommand('extension.addFileHeader', () => {
+    let disposable = vscode.commands.registerCommand('pingleware.addFileHeader', () => {
         addFileHeader();
     });
 
@@ -26,13 +34,13 @@ async function addFileHeader() {
 
         const lastModifiedDate = new Date(fileStat.mtime);		
 		const creationDate = new Date(fileStat.ctime);
+ 
 
 		const fileHeader = `
 /**
  * File: ${fileName}
  * Created: ${formatDate(creationDate)}
  * Last Modified: ${formatDate(lastModifiedDate)}
- * License: CC-BY-4.0
  * File Header Created By: @pingleware/fileheader
  */\n\n`;
 

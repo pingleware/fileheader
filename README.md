@@ -8,11 +8,10 @@ Places the following header information in your file,
 
 ```
 /**
- * File: index.php
- * Created: 11/18/2023, 01:20:05 PM EST
- * Last Modified: <?php echo date("Y-m-d", filemtime(__FILE__)); ?>
- * License: CC-BY-4.0
- * File Header Created By: PINGLEWARE: Add File Header from PRESSPAGE ENTERTAINMENT INC dba PINGLEWARE <maintainers@pingleware.work>
+ * File: filename.ext
+ * Created: 11/18/2023, 12:30:31 PM EST
+ * Last Modified: 11/18/2023, 02:25:22 PM EST
+ * File Header Created By: @pingleware/fileheader
  */
 
 ```
@@ -35,11 +34,10 @@ The fileheader places the following header in your text-based source files,
 
 ```
 /**
- * File: index.php
- * Created: 11/18/2023, 01:20:05 PM EST
- * Last Modified: <?php echo date("Y-m-d", filemtime(__FILE__)); ?>
- * License: CC-BY-4.0
- * File Header Created By: PINGLEWARE: Add File Header from PRESSPAGE ENTERTAINMENT INC dba PINGLEWARE <maintainers@pingleware.work>
+ * File: filename.ext
+ * Created: 11/18/2023, 12:30:31 PM EST
+ * Last Modified: 11/18/2023, 02:25:22 PM EST
+ * File Header Created By: @pingleware/fileheader
  */
 
 ```

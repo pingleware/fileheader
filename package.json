@@ -2,27 +2,35 @@
   "name": "fileheader",
   "displayName": "@pingleware/fileheader",
   "description": "Auto,atically adds a header to your code source file when created",
+  "publisher": "pingleware",
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.84.0"
   },
+  "author": {
+    "name": "PRESSPAGE ENTERTAINMENT INC dba PINGLEWARE"
+  },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "icon": "logo.png",
+  "pricing": "Free",
+  "activationEvents": [
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.addFileHeader",
+        "command": "pingleware.addFileHeader",
         "title": "PINGLEWARE: Add File Header"
       }
     ]
   },
+  "homepage": "https://pingleware.work",
   "bugs": {
     "url": "https://pingleware.support"
   },
-  "license": "See LICENSE.md",
+  "license": "SEE LICENSE IN LICENSE.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pingleware/fileheader.git"
