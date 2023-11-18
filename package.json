@@ -19,6 +19,14 @@
       }
     ]
   },
+  "bugs": {
+    "url": "https://pingleware.support"
+  },
+  "license": "See LICENSE.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pingleware/fileheader.git"
+  },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
