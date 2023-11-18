@@ -16,33 +16,31 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(disposable);
 }
 
-function addFileHeader() {
+async function addFileHeader() {
     const editor = vscode.window.activeTextEditor;
 
     if (editor) {
 		const filePath = editor.document.fileName;
         const fileName = path.basename(filePath); // Get only the base name with extension
+		const fileStat = await vscode.workspace.fs.stat(vscode.Uri.file(filePath));
+
+        const lastModifiedDate = new Date(fileStat.mtime);		
 		const creationDate = new Date();
 
-		let fileHeader = ``;
-
-		//if (fileName.endsWith(".php",fileName.length - 4)) {
-			fileHeader = `
+		const fileHeader = `
 /**
  * File: ${fileName}
  * Created: ${formatDate(creationDate)}
- * Last Modified: <?php echo date("Y-m-d", filemtime(__FILE__)); ?>
+ * Last Modified: ${formatDate(lastModifiedDate)}
  * License: CC-BY-4.0
- * File Header Created By: PINGLEWARE: Add File Header from PRESSPAGE ENTERTAINMENT INC dba PINGLEWARE <maintainers@pingleware.work>
+ * File Header Created By: @pingleware/fileheader
  */\n\n`;
-		//}
-		//if (fileHeader.length > 0) {
-			const currentPosition = editor.selection.start;
 
-			editor.edit((editBuilder) => {
-				editBuilder.insert(currentPosition, fileHeader);
-			});	
-		//}
+		const currentPosition = editor.selection.start;
+
+		editor.edit((editBuilder) => {
+			editBuilder.insert(currentPosition, fileHeader);
+		});	
     }
 }
 
