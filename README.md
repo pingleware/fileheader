@@ -2,6 +2,9 @@
 
 fileheader will automatically place a header comment in your file
 
+Extension URL (might take a few minutes): [https://marketplace.visualstudio.com/items?itemName=pingleware.pingleware-fileheader](https://marketplace.visualstudio.com/items?itemName=pingleware.pingleware-fileheader)
+INFO  Hub URL: [https://marketplace.visualstudio.com/manage/publishers/pingleware/extensions/pingleware-fileheader/hub](https://marketplace.visualstudio.com/manage/publishers/pingleware/extensions/pingleware-fileheader/hub)
+
 ## Features
 
 Places the following header information in your file,

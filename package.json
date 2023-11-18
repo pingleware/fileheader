@@ -1,5 +1,5 @@
 {
-  "name": "fileheader",
+  "name": "pingleware-fileheader",
   "displayName": "@pingleware/fileheader",
   "description": "Auto,atically adds a header to your code source file when created",
   "publisher": "pingleware",
@@ -15,8 +15,7 @@
   ],
   "icon": "logo.png",
   "pricing": "Free",
-  "activationEvents": [
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
