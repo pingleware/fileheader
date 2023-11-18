@@ -25,7 +25,7 @@ async function addFileHeader() {
 		const fileStat = await vscode.workspace.fs.stat(vscode.Uri.file(filePath));
 
         const lastModifiedDate = new Date(fileStat.mtime);		
-		const creationDate = new Date();
+		const creationDate = new Date(fileStat.ctime);
 
 		const fileHeader = `
 /**
